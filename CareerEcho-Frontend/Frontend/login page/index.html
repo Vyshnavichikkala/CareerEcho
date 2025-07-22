@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> CareerEcho</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    
+    <div class="form-container sign-up-container">
+      <form id="registerForm">
+        <h1>Create Account</h1>
+        <input type="text" id="usernameReg" placeholder="Username" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="passwordReg" placeholder="Password" required />
+        <input type="password" id="confirmpassword" placeholder="Confirm Password" required />
+        <button type="submit">Sign Up</button>
+        <p id="responseMsg" style="margin-top:10px; color: rgb(251, 239, 239);"></p>
+      </form>
+    </div>
+    
+    <!-- Sign In Form -->
+    <div class="form-container sign-in-container">
+      <form id="loginForm">
+        <h1>Sign in</h1>
+        <input type="text" id="username" name="username" placeholder="Username" required />
+        <input type="password" id="password" name="password" placeholder="Password" required />
+
+
+        <button type="submit">Sign In</button><br>
+         <a href="resetpassword.html" class="forgot-link" style=" color:#1A2A47; margin-top: 15px; display: inline-block";>Forgot Password?</a>
+      </form>
+    </div>
+
+    
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+        <h1>Welcome!</h1>
+       <p>Log in to continue your  journey.</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+             <h1>New Here?</h1>
+<p>Join CareerEcho and start shaping your future.</p>
+
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const signUpButton = document.getElementById("signUp");
+    const signInButton = document.getElementById("signIn");
+    const container = document.getElementById("container");
+
+    signUpButton.addEventListener("click", () => {
+      container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener("click", () => {
+      container.classList.remove("right-panel-active");
+    });
+
+    document.getElementById('registerForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById('usernameReg').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('passwordReg').value;
+  const confirmPassword = document.getElementById('confirmpassword').value;
+  const message = document.getElementById('responseMsg');
+
+  if (password !== confirmPassword) {
+    message.innerText = 'Passwords do not match!';
+    return;
+  }
+
+  const user = { username, email, password };
+
+  try {
+   const response = await fetch('http://localhost:8080/api/user/register', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(user)
+});
+
+const resultText = await response.text();
+
+if (response.ok) {
+  message.style.color = "lightgreen";
+  message.innerText = resultText; // "User registered"
+} else {
+  message.style.color = "blue";
+  message.innerText = resultText; // "Email already exists"
+}
+  } catch (error) {
+    message.innerText = 'Server error: ' + error.message;
+  }
+});
+
+  </script>
+  <script>
+  document.getElementById("loginForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    try {
+      const response = await fetch("http://localhost:8080/api/user/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+      });
+
+      const resultText = await response.text();
+
+      if (resultText === "success") {
+        window.location.href = "mainpage.html"; 
+      } else {
+        alert("Invalid credentials!");
+      }
+    } catch (error) {
+      alert("Server error: " + error.message);
+    }
+  });
+</script>
+
+</body>
+</html>

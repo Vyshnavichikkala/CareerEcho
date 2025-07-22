@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CareerEcho Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mainpage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+
+     <button class="logout-btn" onclick="logout()">Logout</button>
+    <div class="sidebar">
+      <h2>CareerEcho</h2>
+      <ul>
+        <li><a href="interviewfeedback.html">Interview Feedback</a></li>
+        <li><a href="viewfeedback.html">View Feedback</a></li>
+        <li><a href="codingquestions.html">Coding Practice</a></li>
+        <li><a href="mockinterviewvideos.html">Mock Interview Videos</a></li>
+       <li class="has-submenu">
+  <span>Aptitude ▸</span>
+  <ul class="submenu">
+    <li><a href="aptitude.html">📘 Practice</a></li>
+    <li><a href="test.html">🧪 Test</a></li>
+  </ul>
+</li>
+
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+
+    
+    <div id="mainContent" class="career-intro">
+      <h1>🌟 Welcome to <span class="highlight">CareerEcho</span></h1>
+      <p class="subheading">Echo your success story—one interview at a time.</p>
+
+      <div class="intro-grid">
+        <div class="intro-card">
+          <h2>📋 Real Feedback</h2>
+          <p>Read real-world interview experiences from peers who cracked top roles.</p>
+        </div>
+
+        <div class="intro-card">
+          <h2>💻 Practice Smart</h2>
+          <p>Code with intent. Solve questions designed to match actual company rounds.</p>
+        </div>
+
+        <div class="intro-card">
+          <h2>🎥 Mock Interviews</h2>
+          <p>Watch simulation videos to improve your articulation and confidence.</p>
+        </div>
+
+        <div class="intro-card">
+          <h2>🧠 Core Concepts</h2>
+          <p>Revise key CS topics that matter in both technical and HR interviews.</p>
+        </div>
+      </div>
+
+      <div class="intro-quote">
+        <p><em>"Interviews aren’t barriers, they’re echoes of your preparation."</em></p>
+      </div>
+    </div>
+  </div>
+<script>
+    function logout() {
+      
+      window.location.href = "index.html"; 
+    }
+  </script>
+  
+</body>
+</html>
