@@ -1,0 +1,534 @@
+[{
+  "_id": {
+    "$oid": "6862bdab3fcaac936216c201"
+  },
+  "name": "timework",
+  "theory": "Time and Work problems involve calculating how long it takes one or more people to complete a task, based on their individual or combined work rates. The key formula is Work = Rate × Time, and typically, the work is considered as 1 unit (i.e., completing the whole job).",
+  "questions": [
+    {
+      "question": "A can do a job in 10 days. B can do the same job in 15 days. How long will they take together?",
+      "solution": "A's 1 day work = 1/10, B's 1 day work = 1/15. Combined = 1/10 + 1/15 = (3+2)/30 = 5/30 = 1/6. So they complete the work in 6 days."
+    },
+    {
+      "question": "C can do a job in 8 days. D in 12 days. If they work together, how many days will they take?",
+      "solution": "C's 1 day = 1/8, D's 1 day = 1/12. Combined = (3+2)/24 = 5/24. So they finish in 24/5 = 4.8 days."
+    },
+    {
+      "question": "A is twice as fast as B. A and B together finish a job in 12 days. How many days will B alone take?",
+      "solution": "Let B take x days. Then A = x/2 days. Together = 1/x + 2/x = 3/x = 1/12 ⇒ x = 36. So B takes 36 days."
+    },
+    {
+      "question": "E can do a work in 5 days. F can do the same in 10 days. E works for 2 days, F completes the rest. How many total days?",
+      "solution": "E’s 1 day work = 1/5 ⇒ 2 days = 2/5. Remaining = 1 - 2/5 = 3/5. F = 1/10 per day ⇒ Time = 3/5 ÷ 1/10 = 6 days. Total = 2 + 6 = 8 days."
+    },
+    {
+      "question": "G can finish a work in 20 days. He worked alone for 4 days, then H joined and together they finished in 10 more days. Find H's time alone.",
+      "solution": "G's 4-day work = 4/20 = 1/5. Remaining = 4/5 in 10 days ⇒ Joint rate = 4/5 ÷ 10 = 2/25 ⇒ H’s rate = 2/25 - 1/20 = (8-5)/100 = 3/100 ⇒ H alone = 100/3 ≈ 33.33 days."
+    },
+    {
+      "question": "If 12 men can do a work in 15 days, how many men are needed to complete the same in 10 days?",
+      "solution": "Total work = 12 × 15 = 180 man-days. Required = 180 / 10 = 18 men."
+    },
+    {
+      "question": "A and B can complete a task in 18 days. B and C in 24 days. A and C in 36 days. In how many days can A, B, and C complete it together?",
+      "solution": "Add (A+B)+(B+C)+(A+C)= 2(A+B+C)=1/18+1/24+1/36= (4+3+2)/72 = 9/72 = 1/8 ⇒ A+B+C = 1/16 ⇒ 16 days."
+    },
+    {
+      "question": "If A alone does 40% of a work and B completes the rest in 9 days, how long would A and B take together?",
+      "solution": "40% work done ⇒ 60% in 9 days ⇒ Full work = 9/0.6 = 15 days. So combined = 15 days."
+    },
+    {
+      "question": "A can do a work in 15 days, B in 25 days. They start together, but after 5 days, A leaves. How long will B take to finish?",
+      "solution": "Work in 5 days = 5(1/15+1/25)=5(8/75)=40/75=8/15. Remaining=7/15. B=1/25/day ⇒ Time=7/15 ÷ 1/25 = 35/3 ≈ 11.67 days. Total = 5 + 11.67 = 16.67 days."
+    },
+    {
+      "question": "A does 1/3 of a job in 5 days. How many days to finish the whole job?",
+      "solution": "1/3 in 5 days ⇒ Whole = 5 × 3 = 15 days."
+    },
+    {
+      "question": "Two workers complete a job in 12 days. One does twice as much as the other. How many days would faster one take alone?",
+      "solution": "Let A do 2x, B do x ⇒ Total = 3x ⇒ A = 2/3 of work ⇒ 12 × 2/3 = 8 days."
+    },
+    {
+      "question": "A, B and C together can finish a task in 10 days. A alone in 30 days, B in 20. Find C’s time alone.",
+      "solution": "1/10 = 1/30 + 1/20 + 1/C ⇒ 1/C = 1/10 - (1/30 + 1/20) = 1/10 - (5/60) = 1/10 - 1/12 = 1/60 ⇒ C alone = 60 days."
+    },
+    {
+      "question": "A and B can finish a task in 6 days. A alone takes 10 days. How long will B take alone?",
+      "solution": "1/6 = 1/10 + 1/B ⇒ 1/B = 1/6 - 1/10 = (5-3)/30 = 2/30 ⇒ B = 15 days."
+    },
+    {
+      "question": "If 5 men can complete a work in 12 days, how many days will 8 men take?",
+      "solution": "Work = 5 × 12 = 60 man-days ⇒ 60 ÷ 8 = 7.5 days."
+    },
+    {
+      "question": "A, B and C can complete a work in 10, 15, and 20 days respectively. How long will they take together?",
+      "solution": "1/10 + 1/15 + 1/20 = (6+4+3)/60 = 13/60 ⇒ Time = 60/13 ≈ 4.62 days."
+    },
+    {
+      "question": "A can do a job in 24 days, B in 32 days. They start together, but A leaves after 6 days. B finishes. Total time?",
+      "solution": "6 days together = 6(1/24+1/32)=6(7/96)=42/96=7/16. Remaining = 9/16 ⇒ B’s rate = 1/32 ⇒ Time = 9/16 ÷ 1/32 = 18 days. Total = 6 + 18 = 24 days."
+    },
+    {
+      "question": "B works twice as fast as A. Together they do a work in 12 days. A alone?",
+      "solution": "A = x days, B = x/2 ⇒ 1/x + 2/x = 3/x = 1/12 ⇒ x = 36. A alone = 36 days."
+    },
+    {
+      "question": "20 women complete a task in 15 days. If 5 women leave after 5 days, how long will the rest take?",
+      "solution": "Total work = 20×15=300. Work done in 5 days = 20×5=100. Remaining = 200. Remaining women = 15 ⇒ Time = 200/15 ≈ 13.33 days."
+    },
+    {
+      "question": "X and Y can finish a work in 30 and 20 days respectively. Y worked for 10 days, then X finished. Total days?",
+      "solution": "Y’s 10 day work = 10/20 = 0.5. Remaining = 0.5. X = 1/30/day ⇒ Time = 0.5 ÷ 1/30 = 15 days. Total = 10 + 15 = 25 days."
+    },
+    {
+      "question": "A does half the work in 10 days. B finishes rest in 5 days. Together?",
+      "solution": "A = 0.5 in 10 ⇒ full = 20. B = 0.5 in 5 ⇒ full = 10. Combined rate = 1/20 + 1/10 = 3/20 ⇒ Time = 20/3 ≈ 6.67 days."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6862be633fcaac936216c203"
+  },
+  "name": "percentages",
+  "theory": "Percentages are used to express proportions and compare ratios. A percentage represents a fraction of 100. The formula to convert a percentage to a number is: (percentage / 100) × total. They are commonly used in exams, discounts, population growth, interest rates, and more.",
+  "questions": [
+    {
+      "question": "What is 20% of 150?",
+      "solution": "20% of 150 = (20/100) × 150 = 30"
+    },
+    {
+      "question": "If a shirt costs ₹800 and there is a 25% discount, what is the sale price?",
+      "solution": "Discount = 25% of 800 = ₹200 ⇒ Sale Price = ₹800 - ₹200 = ₹600"
+    },
+    {
+      "question": "A number is increased by 20% and then decreased by 20%. What is the net change?",
+      "solution": "Let the number be 100. Increase: 100 → 120. Decrease: 120 → 96. Net change = 96 - 100 = -4 ⇒ 4% decrease"
+    },
+    {
+      "question": "A’s income is 40% more than B’s. By what percent is B’s income less than A’s?",
+      "solution": "If B = 100, A = 140 ⇒ B is (40/140)×100 = 28.57% less than A"
+    },
+    {
+      "question": "What percent of 90 is 18?",
+      "solution": "(18/90) × 100 = 20%"
+    },
+    {
+      "question": "If 60% of a number is 48, what is the number?",
+      "solution": "Let the number be x ⇒ 60% of x = 48 ⇒ (60/100)×x = 48 ⇒ x = 80"
+    },
+    {
+      "question": "In a school of 1200 students, 25% are girls. How many boys are there?",
+      "solution": "Girls = 25% of 1200 = 300 ⇒ Boys = 1200 - 300 = 900"
+    },
+    {
+      "question": "If the price of an item is increased from ₹500 to ₹600, what is the percentage increase?",
+      "solution": "Increase = 600 - 500 = ₹100 ⇒ (100/500)×100 = 20% increase"
+    },
+    {
+      "question": "Find the percentage change if a value decreases from 240 to 180.",
+      "solution": "Change = 60 ⇒ (60/240)×100 = 25% decrease"
+    },
+    {
+      "question": "30% of a number is 72. What is the number?",
+      "solution": "Let the number be x ⇒ 30% of x = 72 ⇒ x = 72 × 100 / 30 = 240"
+    },
+    {
+      "question": "What is 150% of 80?",
+      "solution": "150% of 80 = (150/100)×80 = 120"
+    },
+    {
+      "question": "A population grows by 10% every year. If the current population is 5000, what will it be after 1 year?",
+      "solution": "10% of 5000 = 500 ⇒ Population after 1 year = 5000 + 500 = 5500"
+    },
+    {
+      "question": "What is the percentage profit if an article is bought for ₹400 and sold for ₹480?",
+      "solution": "Profit = 480 - 400 = 80 ⇒ (80/400)×100 = 20% profit"
+    },
+    {
+      "question": "If a person spends 60% of his income and saves ₹4000, what is his total income?",
+      "solution": "Savings = 40% ⇒ 40% = 4000 ⇒ 1% = 100 ⇒ Income = 100% = ₹10000"
+    },
+    {
+      "question": "What percent is 3 hours of a day?",
+      "solution": "Day = 24 hours ⇒ (3/24)×100 = 12.5%"
+    },
+    {
+      "question": "A student scored 360 marks out of 500. What is his percentage score?",
+      "solution": "(360/500)×100 = 72%"
+    },
+    {
+      "question": "If 75% of students passed an exam and 150 failed, how many students appeared?",
+      "solution": "Let total = x ⇒ Failed = 25% = 150 ⇒ x = 150 × 100 / 25 = 600"
+    },
+    {
+      "question": "A number is increased by 15%. If the new number is 230, what was the original number?",
+      "solution": "Let original be x ⇒ x + 15% of x = 230 ⇒ x(1 + 0.15) = 230 ⇒ x = 230 / 1.15 = 200"
+    },
+    {
+      "question": "An item was sold for ₹690 after a 23% discount. What was the original price?",
+      "solution": "Let original be x ⇒ x - 23% of x = 690 ⇒ x(0.77) = 690 ⇒ x = 690 / 0.77 = ₹896.10"
+    },
+    {
+      "question": "Find the percent change when a quantity goes from 80 to 100.",
+      "solution": "Change = 20 ⇒ (20/80)×100 = 25% increase"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6862bf193fcaac936216c206"
+  },
+  "name": "ratios and proportions ",
+  "theory": "A ratio is a way to compare two quantities. A proportion states that two ratios are equal. They are useful in problems involving comparisons, scaling, and part-to-whole relationships.",
+  "questions": [
+    {
+      "question": "If A:B = 2:3 and B:C = 4:5, find A:B:C.",
+      "solution": "A:B = 2:3, B:C = 4:5 ⇒ Make B same: A:B:C = 8:12:15."
+    },
+    {
+      "question": "The ratio of income to expenditure is 3:2. If income is Rs. 2400, find expenditure.",
+      "solution": "3x = 2400 ⇒ x = 800 ⇒ Expenditure = 2x = 1600."
+    },
+    {
+      "question": "The ratio of boys to girls is 5:7. If there are 120 girls, how many boys are there?",
+      "solution": "7x = 120 ⇒ x = 120/7 ⇒ Boys = 5x = (5 × 120) / 7 ≈ 85.71 (round as per context)."
+    },
+    {
+      "question": "Divide Rs. 1000 in the ratio 3:2.",
+      "solution": "Sum = 3+2 = 5 parts. Share1 = 3×200 = 600, Share2 = 2×200 = 400."
+    },
+    {
+      "question": "Find the fourth proportional to 3, 9, and 12.",
+      "solution": "3:9 = 12:x ⇒ x = (9×12)/3 = 36."
+    },
+    {
+      "question": "A and B share profits in 7:3. If total profit is Rs. 5000, find B’s share.",
+      "solution": "10 parts total ⇒ B's share = (3/10)×5000 = 1500."
+    },
+    {
+      "question": "The ratio of ages of A and B is 4:5. After 5 years, the ratio becomes 5:6. Find their present ages.",
+      "solution": "Let 4x, 5x ⇒ (4x+5)/(5x+5) = 5/6 ⇒ Solve: x = 5 ⇒ A = 20, B = 25."
+    },
+    {
+      "question": "What must be added to both terms of the ratio 2:3 so that it becomes 5:6?",
+      "solution": "(2+x)/(3+x) = 5/6 ⇒ Solve: x = 3."
+    },
+    {
+      "question": "Two numbers are in the ratio 5:6. If the sum is 121, find the numbers.",
+      "solution": "5x + 6x = 11x = 121 ⇒ x = 11 ⇒ Numbers = 55, 66."
+    },
+    {
+      "question": "Find the mean proportional between 4 and 16.",
+      "solution": "Mean = √(4×16) = √64 = 8."
+    },
+    {
+      "question": "If A:B = 3:4 and B:C = 5:6, find A:B:C.",
+      "solution": "Make B same: A:B:C = 15:20:24."
+    },
+    {
+      "question": "A and B are in the ratio 2:3. If A is increased by 20% and B by 10%, what is the new ratio?",
+      "solution": "A = 2x → 2.4x, B = 3x → 3.3x ⇒ New ratio = 24:33 = 8:11."
+    },
+    {
+      "question": "Divide Rs. 1800 among A, B, and C in the ratio 3:4:5.",
+      "solution": "Total parts = 12 ⇒ A = 450, B = 600, C = 750."
+    },
+    {
+      "question": "Find third proportional to 4 and 8.",
+      "solution": "4:8 = 8:x ⇒ x = (8×8)/4 = 16."
+    },
+    {
+      "question": "If 5A = 7B, find A:B.",
+      "solution": "A/B = 7/5 ⇒ A:B = 7:5."
+    },
+    {
+      "question": "What number should be added to 3 and 5 so that the ratio becomes 2:3?",
+      "solution": "(3+x)/(5+x) = 2/3 ⇒ x = 3."
+    },
+    {
+      "question": "The salaries of A and B are in ratio 5:4. Each receives an increment of Rs. 1000. New ratio = 7:6. Find their original salaries.",
+      "solution": "Let salaries be 5x and 4x ⇒ (5x+1000)/(4x+1000) = 7/6 ⇒ x = 2000 ⇒ Salaries = 10,000 and 8000."
+    },
+    {
+      "question": "A and B can complete work in 10 and 15 days. Ratio of work done by A to B?",
+      "solution": "Work rates: 1/10 : 1/15 = 3:2."
+    },
+    {
+      "question": "If A:B = 4:3, and B:C = 2:5, then A:C = ?",
+      "solution": "B is common: A:B = 4:3, B:C = 6:15 ⇒ A:C = 8:15."
+    },
+    {
+      "question": "If a:b = 2:3 and b:c = 4:5, then find a:c.",
+      "solution": "Make b common: a:b = 8:12, b:c = 12:15 ⇒ a:c = 8:15."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6862bf213fcaac936216c208"
+  },
+  "name": "simpleinterest",
+  "theory": "Simple Interest (SI) is calculated on the original principal throughout the entire period. The formula is SI = (P × R × T)/100, where P = Principal, R = Rate, T = Time.",
+  "questions": [
+    {
+      "question": "Find the simple interest on Rs. 1200 for 2 years at 5% per annum.",
+      "solution": "SI = (1200×5×2)/100 = Rs. 120."
+    },
+    {
+      "question": "What is the SI on Rs. 5000 at 6% for 3 years?",
+      "solution": "SI = (5000×6×3)/100 = Rs. 900."
+    },
+    {
+      "question": "How much time will Rs. 1000 take to earn Rs. 200 as SI at 5% p.a?",
+      "solution": "T = (SI×100)/(P×R) = (200×100)/(1000×5) = 4 years."
+    },
+    {
+      "question": "At what rate will Rs. 800 amount to Rs. 920 in 3 years?",
+      "solution": "SI = 120 ⇒ R = (SI×100)/(P×T) = 5%."
+    },
+    {
+      "question": "Find principal if SI is Rs. 400, rate 10%, and time 2 years.",
+      "solution": "P = (SI×100)/(R×T) = (400×100)/(10×2) = Rs. 2000."
+    },
+    {
+      "question": "In how many years will Rs. 1500 become Rs. 1950 at 10% p.a?",
+      "solution": "SI = 450 ⇒ T = (450×100)/(1500×10) = 3 years."
+    },
+    {
+      "question": "A sum doubles in 10 years. Find rate of interest.",
+      "solution": "SI = P ⇒ (P×R×10)/100 = P ⇒ R = 10%."
+    },
+    {
+      "question": "Rs. 4000 becomes Rs. 4600 in 3 years. Find the rate.",
+      "solution": "SI = 600 ⇒ R = (600×100)/(4000×3) = 5%."
+    },
+    {
+      "question": "If SI for 4 years is Rs. 800 on Rs. 2000, find rate.",
+      "solution": "R = (800×100)/(2000×4) = 10%."
+    },
+    {
+      "question": "What is the SI on Rs. 3000 at 8% for 2.5 years?",
+      "solution": "SI = (3000×8×2.5)/100 = Rs. 600."
+    },
+    {
+      "question": "In how many years will Rs. 2500 become Rs. 3000 at 10% p.a?",
+      "solution": "SI = 500 ⇒ T = (500×100)/(2500×10) = 2 years."
+    },
+    {
+      "question": "If SI is Rs. 240 for 2 years at 6%, find the principal.",
+      "solution": "P = (240×100)/(6×2) = Rs. 2000."
+    },
+    {
+      "question": "At what rate will Rs. 2000 yield Rs. 400 in 4 years?",
+      "solution": "R = (400×100)/(2000×4) = 5%."
+    },
+    {
+      "question": "If Rs. 1800 becomes Rs. 2160 in 4 years, what is rate?",
+      "solution": "SI = 360 ⇒ R = (360×100)/(1800×4) = 5%."
+    },
+    {
+      "question": "How much interest does Rs. 2400 earn in 1.5 years at 8%?",
+      "solution": "SI = (2400×8×1.5)/100 = Rs. 288."
+    },
+    {
+      "question": "A sum of Rs. 10000 earns Rs. 1200 in 3 years. Find rate.",
+      "solution": "R = (1200×100)/(10000×3) = 4%."
+    },
+    {
+      "question": "If Rs. 2500 earns Rs. 750 in 5 years, what is rate?",
+      "solution": "R = (750×100)/(2500×5) = 6%."
+    },
+    {
+      "question": "Find time if Rs. 1500 earns Rs. 450 at 6% p.a.",
+      "solution": "T = (450×100)/(1500×6) = 5 years."
+    },
+    {
+      "question": "Rs. 1600 earns Rs. 320 at 8% p.a. Find time.",
+      "solution": "T = (320×100)/(1600×8) = 2.5 years."
+    },
+    {
+      "question": "In how many years will Rs. 3000 amount to Rs. 3900 at 10% p.a?",
+      "solution": "SI = 900 ⇒ T = (900×100)/(3000×10) = 3 years."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6862c02c3fcaac936216c20a"
+  },
+  "name": "speed & distance",
+  "theory": "Speed and distance problems involve calculating how fast something is moving, how far it travels, or how long it takes. The key formulas are: Speed = Distance / Time, Distance = Speed × Time, Time = Distance / Speed.",
+  "questions": [
+    {
+      "question": "A car covers 150 km in 3 hours. What is its speed?",
+      "solution": "Speed = 150 / 3 = 50 km/h"
+    },
+    {
+      "question": "If a train runs at 60 km/h and covers 180 km, how much time does it take?",
+      "solution": "Time = 180 / 60 = 3 hours"
+    },
+    {
+      "question": "A man walks 20 km at 5 km/h. How long does he take?",
+      "solution": "Time = 20 / 5 = 4 hours"
+    },
+    {
+      "question": "How far will a car travel in 2.5 hours at a speed of 80 km/h?",
+      "solution": "Distance = 80 × 2.5 = 200 km"
+    },
+    {
+      "question": "A train 120 m long crosses a pole in 6 seconds. Find its speed in km/h.",
+      "solution": "Speed = (120/6) m/s = 20 m/s = 20 × 18/5 = 72 km/h"
+    },
+    {
+      "question": "A cyclist covers 60 km in 4 hours. What is his average speed?",
+      "solution": "Speed = 60 / 4 = 15 km/h"
+    },
+    {
+      "question": "If a car's speed is 90 km/h, how much time will it take to cover 450 km?",
+      "solution": "Time = 450 / 90 = 5 hours"
+    },
+    {
+      "question": "A runner covers 1.5 km in 5 minutes. What is his speed in km/h?",
+      "solution": "Speed = (1.5 / 5) × 60 = 18 km/h"
+    },
+    {
+      "question": "A man walks at 6 km/h. How far will he walk in 50 minutes?",
+      "solution": "Time = 50/60 = 5/6 hr ⇒ Distance = 6 × 5/6 = 5 km"
+    },
+    {
+      "question": "A train covers a distance of 300 km in 4 hours. What is the average speed?",
+      "solution": "Speed = 300 / 4 = 75 km/h"
+    },
+    {
+      "question": "A car goes 120 km in 2 hours and returns in 3 hours. What is the average speed?",
+      "solution": "Average speed = (2×120 + 3×120) / (2+3) = 600 / 5 = 120 km/h"
+    },
+    {
+      "question": "If a bus travels at 60 km/h for 1.5 hours, how much distance will it cover?",
+      "solution": "Distance = 60 × 1.5 = 90 km"
+    },
+    {
+      "question": "A man runs 10 km in 50 minutes. What is his speed in m/s?",
+      "solution": "Speed = (10000/3000) = 10/3 ≈ 3.33 m/s"
+    },
+    {
+      "question": "A train crosses a 150 m platform in 12 seconds. Its speed is 60 km/h. Find the train length.",
+      "solution": "Speed = 60 × 5/18 = 50/3 m/s. Distance = 50/3 × 12 = 200 m ⇒ Train = 200 - 150 = 50 m"
+    },
+    {
+      "question": "Speed of a boat in still water is 12 km/h. Speed of stream is 3 km/h. What is the downstream speed?",
+      "solution": "Downstream = 12 + 3 = 15 km/h"
+    },
+    {
+      "question": "A train of 180 m takes 15 sec to cross a platform. Find speed in km/h.",
+      "solution": "Speed = 180 / 15 = 12 m/s = 12 × 18/5 = 43.2 km/h"
+    },
+    {
+      "question": "If speed is 90 km/h and distance is 270 km, how long is the journey?",
+      "solution": "Time = 270 / 90 = 3 hours"
+    },
+    {
+      "question": "Train A crosses Train B (120m) in 10 sec. Speed = 72 km/h. Find length of Train A.",
+      "solution": "Speed = 72 × 5/18 = 20 m/s ⇒ Distance = 20 × 10 = 200 m ⇒ A = 200 - 120 = 80 m"
+    },
+    {
+      "question": "A man can swim at 4 km/h in still water. Stream speed is 1 km/h. Find upstream speed.",
+      "solution": "Upstream = 4 - 1 = 3 km/h"
+    },
+    {
+      "question": "A person takes 4 hrs to cover a distance upstream and 3 hrs downstream. Speed of boat = 6 km/h. Find stream speed.",
+      "solution": "Let d = distance. Upstream = d/6 - x, Downstream = d/6 + x. Solve equation."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6862c0443fcaac936216c20c"
+  },
+  "name": "blood relations",
+  "theory": "Blood relation problems test your ability to decode and understand family connections. Key tips include tracking generations and gender, and translating phrases into diagrams or trees.",
+  "questions": [
+    {
+      "question": "A is the son of B. B is the brother of C. C is the husband of D. What is D to A?",
+      "solution": "C is A's uncle, D is A’s aunt."
+    },
+    {
+      "question": "P is the brother of Q. Q is the sister of R. R is the son of S. What is S to P?",
+      "solution": "S is father or mother of P (can’t be determined)."
+    },
+    {
+      "question": "If A is B’s sister and C is B’s mother, then A is _____ of C?",
+      "solution": "A is daughter of C."
+    },
+    {
+      "question": "X is the daughter of Y. Y is the son of Z. How is Z related to X?",
+      "solution": "Z is X's grandfather."
+    },
+    {
+      "question": "A + B means A is the daughter of B. A - B means A is the husband of B. What does P + Q - R mean?",
+      "solution": "P is daughter of Q, Q is husband of R ⇒ R is P's mother-in-law."
+    },
+    {
+      "question": "Pointing to a man, a woman said, 'His mother is the only daughter of my mother.' How is the woman related to the man?",
+      "solution": "Woman is the man's mother."
+    },
+    {
+      "question": "If A is the father of B and C is the brother of A, how is C related to B?",
+      "solution": "C is B’s uncle."
+    },
+    {
+      "question": "X - Y means X is brother of Y; X + Y means X is sister of Y; X * Y means X is daughter of Y. What does A * B - C mean?",
+      "solution": "A is daughter of B, B is brother of C ⇒ A is niece of C."
+    },
+    {
+      "question": "A woman introduces a man as the son of the brother of her mother. How is the man related to the woman?",
+      "solution": "Cousin"
+    },
+    {
+      "question": "If John is brother of Peter and Peter is father of Sam, what is John to Sam?",
+      "solution": "John is uncle of Sam."
+    },
+    {
+      "question": "If A is mother of B and B is father of C, how is A related to C?",
+      "solution": "A is grandmother of C."
+    },
+    {
+      "question": "Pointing to a girl, Ramesh said, 'She is the daughter of the only child of my father.' Who is the girl to Ramesh?",
+      "solution": "Daughter"
+    },
+    {
+      "question": "A is brother of B. C is sister of B. How is A related to C?",
+      "solution": "A is brother of C"
+    },
+    {
+      "question": "A’s father’s only daughter’s brother is B. What is B to A?",
+      "solution": "B is A’s brother."
+    },
+    {
+      "question": "Introducing a man, a woman said: 'His wife is the only daughter of my mother.' How is the man related to the woman?",
+      "solution": "The man is brother-in-law."
+    },
+    {
+      "question": "P is Q's mother. R is Q's brother. S is R's father. How is S related to P?",
+      "solution": "S is husband of P."
+    },
+    {
+      "question": "X is daughter of Y. Y is wife of Z. How is Z related to X?",
+      "solution": "Z is father of X."
+    },
+    {
+      "question": "A is the son of B. C is B's father. D is C's father. What is D to A?",
+      "solution": "D is great-grandfather of A."
+    },
+    {
+      "question": "If A is sister of B, and B is sister of C, how is A related to C?",
+      "solution": "Sister"
+    },
+    {
+      "question": "If P is son of Q and Q is daughter of R, how is R related to P?",
+      "solution": "Grandparent"
+    }
+  ]
+}]

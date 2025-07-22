@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coding Practice - By Level</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: #fff;
+      padding: 30px 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto 40px;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px 30px;
+      margin-top: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      box-shadow: 0 12px 24px rgb(0 0 0 / 0.25);
+    }
+
+    label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+      color: #d0d0d0;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: background 0.25s ease, color 0.25s ease;
+      cursor: pointer;
+    }
+
+    select {
+      background: #fff;
+      color: #252121;
+      border: 2px solid #00e0ff;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 40px;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2300525a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 10px 7px;
+    }
+
+    select:focus {
+      border-color: #00b8cc;
+    }
+
+    button {
+      background: #00e0ff;
+      color: #1a1a1a;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgb(0 224 255 / 0.6);
+    }
+
+    button:hover {
+      background: #00b8cc;
+      color: #fff;
+      box-shadow: 0 6px 14px rgb(0 184 204 / 0.8);
+    }
+
+    .question {
+      background-color: rgba(255, 255, 255, 0.12);
+      padding: 22px 24px;
+      margin-bottom: 22px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: default;
+      user-select: text;
+    }
+
+    .question:hover {
+      transform: scale(1.02);
+      background-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .question-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #00e0ff;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    .testcase {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      white-space: pre-wrap;
+      color: #222;
+      background-color: #d4faff;
+      border: 1px solid #00aacc;
+      font-family: monospace;
+    }
+
+    #questionList {
+      max-height: 480px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    #questionList::-webkit-scrollbar {
+      width: 8px;
+    }
+    #questionList::-webkit-scrollbar-thumb {
+      background-color: #00b8cc;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      select, button {
+        font-size: 15px;
+        padding: 12px 14px;
+      }
+      .question-title {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Coding Practice by Level</h1>
+
+    <div class="section">
+      <label for="level">💡 Select Level:</label>
+      <select id="level" aria-label="Select difficulty level">
+        <option value="">-- Choose a Level --</option>
+        <option value="basic">Basic</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+      <button onclick="loadLevel()" aria-label="Load questions for selected level">Load Questions</button>
+    </div>
+
+    <div class="section" id="questionSection" style="display:none;">
+      <h2 id="levelTitle"></h2>
+      <h3>🧪 Questions</h3>
+      <div id="questionList" tabindex="0" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </div>
+
+  <script>
+    let allQuestions = [];
+
+    fetch("http://localhost:8080/api/questions")
+      .then(res => res.json())
+      .then(data => {
+        allQuestions = data;
+      })
+      .catch(err => {
+        alert("Failed to load coding questions.");
+        console.error(err);
+      });
+
+    function loadLevel() {
+      const selected = document.getElementById("level").value.toLowerCase();
+      if (!selected) return;
+
+      const levelTitle = document.getElementById("levelTitle");
+      const section = document.getElementById("questionSection");
+      const list = document.getElementById("questionList");
+
+      levelTitle.textContent = selected.charAt(0).toUpperCase() + selected.slice(1) + " Level";
+      const filtered = allQuestions.filter(q => q.level?.toLowerCase() === selected);
+
+      list.innerHTML = "";
+
+      if (filtered.length === 0) {
+        list.innerHTML = `<p>No questions found for this level.</p>`;
+      } else {
+        filtered.forEach((q, idx) => {
+          const div = document.createElement("div");
+          div.className = "question";
+          div.innerHTML = `
+            <div class="question-title">${idx + 1}. ${q.title}</div>
+            <p>${q.description}</p>
+            <div class="testcase"><strong>Input:</strong> ${q.input}<br/><strong>Output:</strong> ${q.output}</div>
+          `;
+          list.appendChild(div);
+        });
+      }
+
+      section.style.display = "block";
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
